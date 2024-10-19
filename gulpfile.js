@@ -7,6 +7,7 @@ const cleanCSS = require('gulp-clean-css');
 const terser = require('gulp-terser');
 const babel = require('gulp-babel');
 const browserSync = require('browser-sync').create();
+const htmlbeautify = require('gulp-html-beautify');
 
 // Функция для динамического импорта gulp-imagemin
 async function imagemin() {
@@ -45,6 +46,11 @@ const paths = {
 
 // Компиляция Pug в HTML
 function pugTask() {
+	const beautifyOptions = {
+		indent_size: 2, // измените на нужное количество пробелов
+		indent_char: ' ', // замените на нужный символ
+		unformatted: ['code', 'pre', 'em', 'strong', 'span'],
+	};
 	return gulp
 		.src(paths.pug.pages)
 		.pipe(
@@ -52,6 +58,7 @@ function pugTask() {
 				pretty: true,
 			})
 		)
+		.pipe(htmlbeautify(beautifyOptions))
 		.pipe(gulp.dest(paths.pug.dist))
 		.pipe(browserSync.stream());
 }

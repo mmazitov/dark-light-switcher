@@ -4,45 +4,26 @@
   &#xa0;
 </div>
 
-<h1 align="center">Markup Starter</h1>
+<h1 align="center">Theme Switcher (Light & Dark Modes)</h1>
 
 ## 🎯 About 
-**Markup Starter** is a project template that uses Gulp for automating development tasks such as compiling Pug and Sass, linting JavaScript, and optimizing images.
+This project demonstrates a simple light and dark theme switcher using JavaScript and CSS custom properties. Users can toggle between light and dark themes, and the preference is stored in `localStorage`, so it persists across page reloads.
 
 
 
-## ✨ Gulp tasks
-- **pugTask:** Compiles Pug files into HTML.
-- **sassTask:** Compiles SCSS files into CSS and adds prefixes for cross-browser compatibility.
-- **jsTask:** Lints and compiles JavaScript files using Babel.
-- **fontsTask:** Copies fonts to the distribution folder.
-- **imagesTask:** Optimizes images and copies them to the distribution folder.
-- **picTask:** Copies pictures from the src/pic folder to the distribution folder.
-- **watchTask:** Starts the server and watches for file changes.
-
-## 🚀 Dependencies
-The project uses the following dependencies:
-- **@babel/core:** Babel compiler
-- **@babel/preset-env:** Babel preset for modern JavaScript features
-- **browser-sync:** Local server with automatic reloading
-- **gulp:** Task automation tool
-- **gulp-babel:** Used for compiling JavaScript with Babel
-- **gulp-clean-css:** CSS optimization and minification
-- **gulp-concat:** File concatenation
-- **gulp-eslint**: JavaScript file linting
-- **gulp-imagemin:** Image optimization
-- **gulp-pug:** Compiles Pug files into HTML
-- **gulp-sass:** Compiles Sass into CSS
-- **gulp-terser:** JavaScript minification
-- **sass:** Compiled Sass
+## ✨ Features
+- Toggle between light and dark themes with a button.
+- Theme preference is saved to `localStorage` and applied automatically on reload.
+- Responsive layout with modern styles.
+- Well-organized and clean codebase with SCSS for styling.
 
 ## 🏁 Starting
 ```
 # Clone this project
-$ git clone https://github.com/mmazitov/markup-starter
+$ git clone https://github.com/mmazitov/dark-light-switcher
 
 # Access
-$ cd markup-starter
+$ cd dark-light-switcher
 
 # Install the dependencies using Yarn or npm:
 $ $ yarn install or $ npm install
